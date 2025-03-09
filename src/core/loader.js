@@ -5,14 +5,14 @@ import {useAppStore} from '@/store/app'
 const updateSlashCommands = async(commands) => {
     const rest = new REST({version: 10}).setToken(process.env.TOKEN)
     await rest.put(
-        Routes.applicationCommands(
+        Routes.applicationGuildCommands(
             process.env.APPLICATION_ID,
-            995286200699064372,
+            '995286200699064372',
         ),
         {
             body: commands,
         }
-    )
+    )  
 }
 
 
